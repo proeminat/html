@@ -1,0 +1,1675 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>prova</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-1-cose-html.html"><strong aria-hidden="true">1.</strong> Cos’è l’HTML?</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1-2-concetti-base.html"><strong aria-hidden="true">1.1.</strong> Concetti base del linguaggio</a></li><li class="chapter-item expanded "><a href="1-3-esempio-pratico.html"><strong aria-hidden="true">1.2.</strong> Semplice esempio pratico</a></li><li class="chapter-item expanded "><a href="1-4-editor-html.html"><strong aria-hidden="true">1.3.</strong> Un editor che fa al caso tuo</a></li><li class="chapter-item expanded "><a href="1-5-ricapitoliamo.html"><strong aria-hidden="true">1.4.</strong> Ricapitoliamo</a></li></ol></li><li class="chapter-item expanded "><a href="2-2-Elementi-per-il-testo-in-HTML.html"><strong aria-hidden="true">2.</strong> Elementi per il testo in HTML</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2-2-paragrafi.html"><strong aria-hidden="true">2.1.</strong> I paragrafi</a></li><li class="chapter-item expanded "><a href="2-3-andare-a-capo.html"><strong aria-hidden="true">2.2.</strong> Andare a capo</a></li><li class="chapter-item expanded "><a href="2-4-headings.html"><strong aria-hidden="true">2.3.</strong> Headings, i titoli</a></li><li class="chapter-item expanded "><a href="2-5-grassetti-e-corsivi.html"><strong aria-hidden="true">2.4.</strong> Grassetti e corsivi</a></li><li class="chapter-item expanded "><a href="2-8-elenchi-puntati-e-numerati.html"><strong aria-hidden="true">2.5.</strong> Elenchi puntati e numerati</a></li><li class="chapter-item expanded "><a href="2-6-citazioni-ed-altri-elementi.html"><strong aria-hidden="true">2.6.</strong> Citazioni, acronimi, codice e altri elementi per il testo</a></li><li class="chapter-item expanded "><a href="2-7-apici-pedici.html"><strong aria-hidden="true">2.7.</strong> Apici e pedici</a></li></ol></li><li class="chapter-item expanded "><a href="3-1-Elementi-inline-e-block.html"><strong aria-hidden="true">3.</strong> Elementi inline e block, le tipologie di tag per il layout</a></li><li class="chapter-item expanded "><a href="4-tabelle.html"><strong aria-hidden="true">4.</strong> Tabelle</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4-1-tag-base.html"><strong aria-hidden="true">4.1.</strong> I tag di base</a></li><li class="chapter-item expanded "><a href="4-2-template-tabella.html"><strong aria-hidden="true">4.2.</strong> Il template di una tabella: caption, thead, tbody, tfoot</a></li><li class="chapter-item expanded "><a href="4-3-raggruppare-celle.html"><strong aria-hidden="true">4.3.</strong> Raggruppare celle: righe o colonne</a></li></ol></li><li class="chapter-item expanded "><a href="5-1-link.html"><strong aria-hidden="true">5.</strong> Link</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5-2-attributo-href.html"><strong aria-hidden="true">5.1.</strong> Attributo href</a></li><li class="chapter-item expanded "><a href="5-3-attributo-target.html"><strong aria-hidden="true">5.2.</strong> Attributo target</a></li><li class="chapter-item expanded "><a href="5-4-link-a-file.html"><strong aria-hidden="true">5.3.</strong> Link a file e documenti</a></li><li class="chapter-item expanded "><a href="5-5-anchor-link.html"><strong aria-hidden="true">5.4.</strong> Anchor link</a></li><li class="chapter-item expanded "><a href="5-6-percorsi.html"><strong aria-hidden="true">5.5.</strong> Percorsi relativi e assoluti</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5-6-1-percorsi-assoluti.html"><strong aria-hidden="true">5.5.1.</strong> Percorsi assoluti</a></li><li class="chapter-item expanded "><a href="5-6-2-percorsi-relativi.html"><strong aria-hidden="true">5.5.2.</strong> Percorsi relativi</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="6-file-multimediali.html"><strong aria-hidden="true">6.</strong> Multimedia</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6-1-immagini.html"><strong aria-hidden="true">6.1.</strong> Le immagini</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6-1-1-attributo-src.html"><strong aria-hidden="true">6.1.1.</strong> Attributo src</a></li><li class="chapter-item expanded "><a href="6-1-2-attributo-alt.html"><strong aria-hidden="true">6.1.2.</strong> Attributo alt</a></li><li class="chapter-item expanded "><a href="6-1-3-immagini-link.html"><strong aria-hidden="true">6.1.3.</strong> Immagini e link</a></li><li class="chapter-item expanded "><a href="6-1-4-formati-immagine.html"><strong aria-hidden="true">6.1.4.</strong> Formati immagine</a></li></ol></li><li class="chapter-item expanded "><a href="6-2-altri-formati-multimediali.html"><strong aria-hidden="true">6.2.</strong> Altri formati multimediali</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6-2-1-file-audio.html"><strong aria-hidden="true">6.2.1.</strong> HTML e file audio. Tag &lt;audio&gt;</a></li><li class="chapter-item expanded "><a href="6-2-1-file-video.html"><strong aria-hidden="true">6.2.2.</strong> HTML e file video. Tag &lt;video&gt;</a></li></ol></li><li class="chapter-item expanded "><a href="6-3-integrare-mappe.html"><strong aria-hidden="true">6.3.</strong> Integrare mappa google</a></li></ol></li><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.</strong> Form</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.1.</strong> Tag &lt;form&gt;</a></li><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.2.</strong> Tag &lt;input&gt;</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.2.1.</strong> Attributi del tag input</a></li><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.2.2.</strong> Attributo type</a></li></ol></li><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.3.</strong> Tag  &lt;select&gt; e &lt;option&gt;</a></li><li class="chapter-item expanded "><a href="form.html"><strong aria-hidden="true">7.4.</strong> Tag  &lt;textarea&gt;</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">prova</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="cosè-lhtml"><a class="header" href="#cosè-lhtml">Cos’è l’HTML?</a></h1>
+<p>Html (<em>Hypertext Markup Language</em>) è innanzitutto un <strong>linguaggio di formattazione</strong>, come già detto utilizzato per la <strong>creazione di pagine Web</strong>, e <strong>NON</strong> un linguaggio di programmazione, come invece lo è JavaScript (che per ora mettiamo da parte).</p>
+<p>In Internet, l’HTML è praticamente ovunque. E’ infatti lo <em>“scheletro”</em> di ogni sito e senza di esso non ci sarebbe la struttura fondamentale che regge in piedi l’intero sistema: come costruire un palazzo senza fondamenta, impossibile! Parlo di scheletro perché solitamente una pagina web viene abbellita attraverso il Css e resa dinamica grazie a JavaScript, ma questo è un altro discorso. Soltanto attraverso l’utilizzo di Html è comunque possibile creare un sito web.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="concetti-base-del-linguaggio"><a class="header" href="#concetti-base-del-linguaggio">Concetti base del linguaggio</a></h3>
+<p>Come prima cosa, HTML si basa esclusivamente sul concetto di <strong>tag</strong>, ovvero noi indichiamo cosa vogliamo visualizzare sulla nostra pagina web attraverso l’apertura e la chiusura di questi tag, come se fossero delle parole chiave. Ogni tag ha la possibilità inoltre di avere degli <strong>attributi</strong>, che servono a personalizzare e modificare il contenuto.</p>
+<p>Ti dico inoltre che un sito è suddiviso in un <strong>Header</strong>, ovvero la testata, e in un <strong>Body</strong>, ovvero un corpo centrale. Quando stiamo per scrivere una pagina web, appunto, dobbiamo tener conto di questa cosa.</p>
+<p>Uniamo questi due concetti per capire bene come funziona:</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+     ...altro codice...
+  &lt;/head&gt;
+  &lt;body&gt;
+     ...altro codice...
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Cosa abbiamo fatto? Semplice, abbiamo creato un header e un body attraverso l’apertura (<code>&lt;…&gt;</code>) e la chiusura (<code>&lt;/…&gt;</code>) degli appositi tag! Come puoi notare, all’inizio e alla fine ho aperto e chiuso il tag <strong><code>&lt;html&gt;</code></strong>…contenuto pagina…<strong><code>&lt;/html&gt;</code></strong>: questo non va mai dimenticato!</p>
+<p>In questo modo abbiamo dato una struttura base al nostro ipotetico sito. Esistono tantissimi tag html per poter inserire quello che ci pare, alcuni fondamentali come il tag <strong><code>&lt;title&gt;</code></strong>, ma non starò qui a spiegarteli tutti; ti consiglio di dare uno sguardo a <a href="https://www.ocean-team.com/upload/immagini/certificazioni/e77dd6f7bc9604ae793a68a9ce4d0f64.pdf">questa tabella</a> per scoprirli. Il nostro scopo è creare qualcosa di semplice per iniziare a prendere confidenza con questo linguaggio. Un passo alla volta!</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="semplice-esempio-pratico"><a class="header" href="#semplice-esempio-pratico">Semplice esempio pratico</a></h3>
+<p>Vediamo ora un semplice esempio per capire meglio l’utilizzo dei tag html. Proviamo a creare una <strong>pagina web</strong> che ci mostri un messaggio di benvenuto. Utilizzerò anche il tag che spesso viene scelto per creare titoli e per chiarire ogni dubbio <em>commenterò</em> tutto ciò che sto per fare.</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;
+        PROVA 1  
+     &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     &lt;h3&gt; BENVENUTO NEL WEB! &lt;/h3&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Come puoi vedere, ho utilizzato il tag <strong><code>&lt;h3&gt;</code></strong>…<strong><code>&lt;/h3&gt;</code></strong> (ricordatevi sempre di chiudere i tag!) per creare un titolo, ma che senso avrebbe un unico messaggio in una pagina? Proviamo ad inserire un paragrafo e firmiamo la nostra creazione!</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt;
+     &lt;title&gt;
+        PROVA 1  
+     &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     &lt;h3&gt; BENVENUTO NEL WEB! &lt;/h3&gt;
+     &lt;p&gt;
+        Ciao e benvenuto nel nostro sito! Questa è per ora ancora una pagina prova, presto
+        arriveranno tante novità!      
+     &lt;/p&gt;
+     &lt;br&gt;
+     &lt;p&gt;
+       &lt;b&gt;-OurWeb&lt;/b&gt;
+     &lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Ho dunque inserito i tag <strong><code>&lt;p&gt;</code></strong>…<strong><code>&lt;/p&gt;</code></strong>, che permettono di scrivere un paragrafo all’interno della nostra pagina. Inoltre, se noterai bene, ho scelto di introdurre anche i tag <strong><code>&lt;br&gt;</code></strong> e <strong><code>&lt;b&gt;</code></strong> (<em>Bold, grassetto</em>). Come hai notato, il primo dei due non necessita di essere chiuso e serve ad inserire uno spazio tra due paragrafi, mentre il secondo va chiuso e serve a rendere in grassetto la parola posta al suo interno.</p>
+<p><em>Et voilà!</em> Il gioco è fatto. Scritto il codice, vediamo il risultato ottenuto! Eccolo.</p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="un-editor-che-fa-al-caso-tuo"><a class="header" href="#un-editor-che-fa-al-caso-tuo">Un editor che fa al caso tuo</a></h3>
+<p>Da scaricare gratis sul proprio PC/MAC</p>
+<ul>
+<li>Textedit o Notepad</li>
+<li><a href="https://atom.io/">Atom</a></li>
+<li><a href="https://brackets.io/">Brackets</a></li>
+</ul>
+<p>Da utilizzare direttamente online</p>
+<ul>
+<li>
+<p><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_editors">w3schools</a> - utile anche per la sua documentazione!!!</p>
+</li>
+<li>
+<p><a href="https://jsfiddle.net/">jsfiddle</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="ricapitoliamo"><a class="header" href="#ricapitoliamo">Ricapitoliamo</a></h3>
+<p><strong>HTML</strong> è lo scheletro di ogni sito web</p>
+<p><strong>CSS</strong> da lo stile grafico allo scheletro</p>
+<p><strong>Javascript</strong> rende dinamica l'interazione dell'utente con la pagina </p>
+<p><img src="https://i.pinimg.com/originals/f6/28/b7/f628b79ea9ba959fcd5196a21df95497.jpg" alt="Pin on Web Design and Development Training Institute" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="elementi-per-il-testo-in-html"><a class="header" href="#elementi-per-il-testo-in-html">Elementi per il testo in HTML</a></h1>
+<p>In una pagina HTML tutti gli elementi sono connotati da <strong>tag</strong> (letteralmente “etichette”). Si tratta di marcatori che evidenziano non tanto l’aspetto, quanto il senso, il ruolo, o l’organizzazione che vogliamo assegnare ai contenuti. Ad esempio se indichiamo un titolo con <code>&lt;h1&gt;</code> per noi le parole in quel titolo rappresentano il tema principale della pagina, al di là del modo in cui saranno visualizzate.</p>
+<h2 id="la-semantica-nellhtml"><a class="header" href="#la-semantica-nellhtml">La semantica nell’HTML</a></h2>
+<p>Tieni presente che ogni tag racchiude, oltre che un aspetto diverso, anche un significato ben preciso che cambia spesso il senso di ciò che stai realizzando. Un tag quindi non rappresenta sempre e solo una regola di formattazione, <strong>ma può rappresentare anche il <em>significato stesso</em> dell’elemento</strong>. </p>
+<h2 id="titoli-paragrafi-e-testi"><a class="header" href="#titoli-paragrafi-e-testi">Titoli, paragrafi e testi</a></h2>
+<p>HTML è nato per la realizzazione di contenuti ipertestuali ed è naturale che la maggior parte dei tag siano stati creati per l’<strong>organizzazione dei testi</strong>, quindi per la definizione di titoli, paragrafi sezioni, articoli, etc.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="i-paragrafi-p"><a class="header" href="#i-paragrafi-p">I paragrafi <code>&lt;p&gt;</code></a></h2>
+<p>Il paragrafo <code>&lt;p&gt;</code> è un elemento contenitore che al suo interno prevede l’inserimento di testo e di altri tag. Ecco un esempio:</p>
+<pre><code class="language-html">&lt;p&gt;Nel primo paragrafo di questa trattazione, ci occuperemo
+dell'importanza del testo nel Web. Grazie ad un semplice esempio
+possiamo sperimentare molte cose.&lt;/p&gt;
+&lt;p&gt;Per default il browser manderà a capo il contenuto di questo
+secondo paragrafo.&lt;/p&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2006/03/06.paragraph.png" alt="img" /></p>
+<p>Il tag <code>&lt;p&gt;</code>è peraltro un elemento di tipo <strong>Block</strong>, significa che il comportamento di base del browser sarà quello di andare a capo al termine del paragrafo e che sono stabiliti margini per il testo.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="andare-a-capo-br"><a class="header" href="#andare-a-capo-br">Andare a capo, <code>&lt;br&gt;</code></a></h2>
+<p>Il tag <strong><code>&lt;br&gt;</code></strong> sta per <em>break line</em> e serve per andare a capo nel bel mezzo di un testo. Come è facile notare infatti, anche se andiamo a capo all’interno dell’editor, il testo nel browser non va a capo se non alla fine dello spazio disponibile per il suo contenitore.</p>
+<p>Per forzare il testo ad andare a capo, inseriamo un <code>&lt;br&gt;</code>, in questo modo:</p>
+<pre><code class="language-html">Questo è un testo che va a capo
+spesso all'interno dell'editor
+tuttavia i browser ignoreranno
+questo fatto e considereranno &lt;br&gt;
+il testo come una singola
+riga continua, che va a capo
+solo quando incontra il limite
+del proprio contenitore
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/06.br01.png" alt="img" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="headings-i-titoli-h1-h2-h3-etc"><a class="header" href="#headings-i-titoli-h1-h2-h3-etc">Headings, i titoli h1, h2, h3, etc.</a></h2>
+<p>I titoli (<strong>headings</strong>) sono i tag che ci aiutano a definire il tema della pagina. In genere sono rappresentati in grassetto e con una dimensione del testo ingrandita. Anche questi sono elementi di tipo <em>block</em> e sia le dimensioni sia il margine applicato per default dal browser sono proporzionali all’importanza del titolo.</p>
+<h3 id="gerarchia-degli-headings"><a class="header" href="#gerarchia-degli-headings">Gerarchia degli headings</a></h3>
+<p>Come si intuisce dai numeri <strong>i titoli sono gerarchici</strong>. Questo significa che <em>h1</em> sarà il titolo principale della pagina. Se ci serviranno altri titoli per specializzare alcune sezioni importanti del testo (le “main sections”) è consigliato scegliere prima <em>h2</em>, per le sottosezioni utilizzeremo <code>h3</code> e così via con una suddivisione sempre più granulare fino ad utilizzare l’<em>h6</em>.</p>
+<pre><code class="language-html">&lt;h1&gt;Casa&lt;/h1&gt;
+&lt;h2&gt;Acquistare la casa&lt;/h2&gt;
+&lt;h3&gt;Le pratiche per l'acquisto di casa&lt;/h3&gt;
+&lt;h3&gt;Agenzie immobiliari, quali scegliere&lt;/h3&gt;
+&lt;h2&gt;Arredare la casa&lt;/h2&gt;
+&lt;h3&gt;Come scegliere la cucina per la nuova casa&lt;/h3&gt;
+&lt;h3&gt;Lampadari, tipologie e differenze&lt;/h3&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2006/03/06.headings.png" alt="img" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="grassetti-e-corsivi"><a class="header" href="#grassetti-e-corsivi">Grassetti e corsivi</a></h2>
+<p>Fin dalle prime versioni di HTML, perché un testo apparisse in grassetto, è stato sufficiente inserirlo in un tag <strong><code>&lt;b&gt;</code></strong>, così come per mettere in corsivo una frase si è utilizzato il tag <strong><code>&lt;i&gt;</code></strong></p>
+<p>Per una costruzione dei documenti più orientata alla semantica e con le versioni più recenti del liguaggio, è stato consigliato di utilizzare <strong><code>&lt;em&gt;</code></strong> per il corsivo e <strong><code>&lt;strong&gt;</code></strong> per i grassetti. Rispettivamente i due tag stavano per <em>emphasis</em> (enfasi) e <em>strong emphasis</em> (forte enfasi) e i browser assegnano loro come stili proprio il corsivo e il grassetto</p>
+<h3 id="come-convivono-b-i-em-e-strong"><a class="header" href="#come-convivono-b-i-em-e-strong">Come convivono b, i, em e strong</a></h3>
+<p>Cerchiamo di capire quindi come utilizzare i diversi tag facendoci aiutare dalla specifica:</p>
+<table><thead><tr><th>TAG</th><th>DESCRIZIONE</th><th>RESA DI BASE</th></tr></thead><tbody>
+<tr><td><strong><code>&lt;strong&gt;</code></strong></td><td>Attribuisce al testo una forte importanza, serietà o urgenza (ora <em>strong</em> sta per <em>importance</em>). Aiuta a tematizzare la pagina e può essere utilizzato anche per strategie SEO, può essere utilizzato anche all’interno di headings per indicare la parte più importante di un titolo (es. <code>&lt;h1&gt;Capitolo 1. &lt;strong&gt;La casa&lt;/strong&gt;&lt;/h1&gt;</code>).</td><td>Grassetto</td></tr>
+<tr><td><strong><code>&lt;b&gt;</code></strong></td><td>Offre una differenza stilistica rispetto al resto del contenuto, senza attribuire un’importanza specifica al testo (<strong>nota:</strong> che sia bold o no non importa).</td><td>Grassetto</td></tr>
+<tr><td><strong><code>&lt;em&gt;</code></strong></td><td>Simile a strong, serve a rappresentare un testo o una frase che si pronuncia in modo differente dal resto al testo. (da <em>emphasis</em> diventa <em>stress emphasis</em>) .</td><td>Corsivo</td></tr>
+<tr><td><strong><code>&lt;i&gt;</code></strong></td><td>Serve a rappresentare testo che esprima un tono, uno stato d’animo o qualcosa che si discosti dal resto del contenuto, senza aggiungere ulteriori significati o importanza.</td><td>Corsivo</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="elenchi-puntati-e-numerati"><a class="header" href="#elenchi-puntati-e-numerati">Elenchi puntati e numerati</a></h2>
+<p>Gli elenchi giocano un ruolo molto importante nei testi, ma anche nella definizione di elementi strutturali delle pagine HTML.</p>
+<p>Dal punto di vista dell’<strong>organizzazione del testo</strong> sono utili ad esempio quando occorre sintetizzare concetti per punti, indicare in sequenza le fasi di un processo oppure stilare un elenco di definizioni o un glossario.</p>
+<p>Nella organizzazione della <strong>struttura della pagina</strong> sono spesso utilizzati per definire menu ad esempio, cosa che anche semanticamente ha una sua valenza, perché si tratta sempre di liste.</p>
+<p>Vediamo dunque quali sono le tre tipologie di elenco disponibili in HTML:</p>
+<ul>
+<li>Elenchi <strong>ordinati</strong></li>
+<li>Elenchi <strong>non ordinati</strong></li>
+<li>Elenchi di <strong>definizioni</strong></li>
+</ul>
+<p>Tutti e tre i tipi di elenchi funzionano nel medesimo modo: si apre il tag, si elencano i vari elementi della lista (ciascuno con il proprio tag), si chiude il tag dell’elenco.</p>
+<h3 id="ul-gli-elenchi-non-ordinati-o-elenchi-puntati"><a class="header" href="#ul-gli-elenchi-non-ordinati-o-elenchi-puntati">UL, gli elenchi non ordinati (o elenchi puntati)</a></h3>
+<p>L’elenco non ordinato (<em>unordered list</em>) è forse il più usato e si descrive utilizzando il tag <strong><code>&lt;ul&gt;</code></strong>. Al suo interno possiamo inserire gli elementi della lista (<em>list item</em>) utilizzando il tag <strong><code>&lt;li&gt;</code></strong>. Ecco un semplice esempio</p>
+<pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;primo elemento&lt;/li&gt;
+  &lt;li&gt;secondo elemento&lt;/li&gt;
+  &lt;li&gt;terzo elemento&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<img src="https://static.html.it/app/uploads/2016/03/11.ul_.png" alt="img" style="zoom:100%;" />
+<h3 id="annidare-le-liste-non-numerate"><a class="header" href="#annidare-le-liste-non-numerate">Annidare le liste non numerate</a></h3>
+<p>In generale possiamo inserire diversi livelli all’interno delle liste, creando delle strutture “ad albero”, utili a definire oggetti come menu o tassonomie. Per farlo è sufficiente inserire un nuovo elenco all’interno di un elemento:</p>
+<pre><code class="language-html">&lt;ul&gt;
+	&lt;li&gt;primo della 1a lista&lt;/li&gt;
+	&lt;li&gt;secondo della 1a lista
+		&lt;ul&gt;
+			&lt;li&gt;primo della 2a lista&lt;/li&gt;
+			&lt;li&gt;secondo della 2a lista
+				&lt;ul&gt;
+					&lt;li&gt;primo della 3a lista&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+			&lt;li&gt;terzo della 2a lista&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>Interessante notare che il rendering di base in genere mostra simboli diversi per i punti a seconda del livello dell’elemento.</p>
+<p><img src="https://static.html.it/app/uploads/2016/03/11.ul_.nested.png%22" alt="img" /></p>
+<h2 id="ol-gli-elenchi-ordinati-o-elenchi-numerati"><a class="header" href="#ol-gli-elenchi-ordinati-o-elenchi-numerati">OL, gli elenchi ordinati (o elenchi numerati)</a></h2>
+<p>Gli elenchi ordinati (<em>ordered list</em>) sono contraddistinti dall’enumerazione degli elementi che compongono la lista. Il tag da utilizzare per aprire un elenco ordinato è <strong><code>&lt;ol&gt;</code></strong> e anche in questo caso gli elementi sono individuati dal tag <strong><code>&lt;li&gt;</code></strong>:</p>
+<pre><code class="language-html">Testo che precede la lista
+&lt;ol&gt;
+	&lt;li&gt;primo elemento&lt;/li&gt;
+	&lt;li&gt;secondo elemento&lt;/li&gt;
+	&lt;li&gt;terzo elemento&lt;/li&gt;
+&lt;/ol&gt;
+Testo che segue la lista
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/03/11.ol_.png" alt="img" /></p>
+<h3 id="attributo-type-per-descrivere-il-tipo-di-elenco"><a class="header" href="#attributo-type-per-descrivere-il-tipo-di-elenco">Attributo type, per descrivere il tipo di elenco</a></h3>
+<p>L’attributo <strong>type</strong> applicato al tag <em>ol</em> serve per specificare il tipo di enumerazione che vogliamo applicare. Lo stile di enumerazione visualizzato di default dal browser è quello numerico, ma possiamo indicare se le voci di elenco seguono punti definiti come numeri, come lettere dell’alfabeto o come numeri romani.</p>
+<table><thead><tr><th>Valore di type</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><code>type=&quot;1&quot;</code></td><td>numeri interi “arabi” (valore di default)</td></tr>
+<tr><td><code>type=&quot;a&quot;</code></td><td>numeri alfabeto minuscolo</td></tr>
+<tr><td><code>type=&quot;A&quot;</code></td><td>numeri alfabeto maiuscolo</td></tr>
+<tr><td><code>type=&quot;i&quot;</code></td><td>numeri numeri romani minuscoli</td></tr>
+<tr><td><code>type=&quot;I&quot;</code></td><td>numeri numeri romani maiuscoli</td></tr>
+</tbody></table>
+<p>Proviamo quindi a vedere come rendere un elenco annidato con diversi tipi di enumerazione:</p>
+<pre><code class="language-html">&lt;ol type=&quot;1&quot;&gt;&lt;!-- numeri --&gt;
+	&lt;li&gt;Primo livello
+		&lt;ol type=&quot;a&quot;&gt;&lt;!-- lettere --&gt;
+			&lt;li&gt;Secondo livello
+				&lt;ol type=&quot;I&quot;&gt;&lt;!-- numeri romani --&gt;
+					&lt;li&gt;Terzo livello&lt;/li&gt;
+					&lt;li&gt;Terzo livello&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/li&gt;
+			&lt;li&gt;Secondo livello&lt;/li&gt;
+		&lt;/ol&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Primo livello&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/03/11.ol_.nested.png" alt="img" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="citazioni-acronimi-codice-e-altri-elementi-per-il-testo"><a class="header" href="#citazioni-acronimi-codice-e-altri-elementi-per-il-testo">Citazioni, acronimi, codice e altri elementi per il testo</a></h2>
+<p>Nel testo può essere utile inserire citazioni di frasi celebri, apici e pedici, usare degli acronimi e delle abbreviazioni, codice sorgente o demarcare alcune parole. Esaminiamo gli elementi HTML più utilizzati per lavorare sui testi.</p>
+<h3 id="citazioni-cite-e-blockquote"><a class="header" href="#citazioni-cite-e-blockquote">Citazioni, cite e blockquote</a></h3>
+<h4 id="blockquote"><a class="header" href="#blockquote">blockquote</a></h4>
+<p>Secondo la specifica HTML5 il <strong><code>&lt;blockquote&gt;</code></strong> è un elemento che ospita contenuti citati da altre fonti, fossero pure i commenti di altri utenti in un blog. Inoltre al suo interno possono apparire anche dei rimandi alla fonte contenuti in elementi <em>cite</em> o <em>footer</em>.</p>
+<pre><code class="language-html">&lt;blockquote&gt;
+	&lt;p&gt;[...] fatti non foste a viver come bruti, ma per seguir virtute e canoscenza&lt;/p&gt;
+	&lt;cite&gt;Inferno Canto XXVI - La Divina Commedia&lt;/cite&gt;
+&lt;/blockquote&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/10.blockquote.png" alt="img" /></p>
+<p>Nella prassi questo tag è spesso stato utilizzato (pur impropriamente) per definire delle note nel testo</p>
+<h4 id="cite"><a class="header" href="#cite">cite</a></h4>
+<p>il tag <strong><code>&lt;cite&gt;</code></strong> serve per riportare il nome di un’opera di ingegno, ad esempio il titolo di un libro, di un film o di una canzone dalla quale si è tratta una citazione, oppure ancora il nome di un autore o del personaggio che ha coniato una frase. È un elemento <em>inline</em> e di base appare in corsivo.</p>
+<h4 id="q"><a class="header" href="#q">q</a></h4>
+<p>Se vogliamo inserire delle citazioni direttamente all’interno di un testo, possiamo utilizzare il tag <strong><q></strong>, un elemento inline che si può utilizzare per specificare una frase presa da un’opera lettaria o da una fonte, senza doverle dedicare un blocco separato:</p>
+<pre><code class="language-html">&lt;p&gt;Avrei spronato i miei colleghi a fare di più, li avrei incalzati citando
+  &lt;cite&gt;Dante Alighieri&lt;/cite&gt;: &quot;&lt;q&gt;Fatti non foste a viver come bruti&lt;/q&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="apici-e-pedici"><a class="header" href="#apici-e-pedici">Apici e pedici</a></h2>
+<p>I tag che utilizziamo sono <strong><sup></strong> per gli apici e <strong><sub></strong> per i pedici. Sono entrambi elementi inline e la rappresentazione di default sui browser è quella che ci aspettiamo, carattere rimpicciolito e posto più in alto o più in basso a seconda che si tratti di un apice o di un pedice.</p>
+<p>Ecco un celebre esempio:</p>
+<pre><code class="language-html">E = mc&lt;sup&gt;2&lt;/sup&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/09.sup_.png" alt="img" /></p>
+<p>Se vogliamo rappresentare una variabile, la famosa ‘x’ della scuola possiamo usare il tag <code>&lt;var&gt;</code>:</p>
+<pre><code class="language-html">&lt;var&gt;x&lt;sub&gt;i&lt;/sub&gt;&lt;/var&gt;
+</code></pre>
+<p>Ottenendo la tipica visualizzazione in corsivo e il pedice per il contatore ‘i’.</p>
+<p><img src="https://static.html.it/app/uploads/2016/05/09.sub_.png" alt="img" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="elementi-inline-e-block-le-tipologie-di-tag-per-il-layout"><a class="header" href="#elementi-inline-e-block-le-tipologie-di-tag-per-il-layout">Elementi inline e block, le tipologie di tag per il layout</a></h1>
+<p>I tag HTML possono rappresentare oggetti (come ad esempio le immagini) o servire a suddividere la pagina in aree (come i <strong><code>div</code></strong> o le <strong><code>section</code></strong>). Ci sono diverse tipologie di tag e conoscerle diventa determinante per usare il tag giusto al posto giusto e per applicare in seguito le regole CSS.</p>
+<p>Le principali tipologie di visualizzazione in cui si dividono gli elementi sono :</p>
+<table><thead><tr><th>Tipologia</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong>Block</strong> (elementi blocco)</td><td>Elementi che costituiscono un blocco attorno a sé.  (es. <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>)</td></tr>
+<tr><td><strong>Inline</strong> (elementi “in linea”)</td><td>Elementi che non vanno a capo e possono essere integrati nel testo, come i link, le immagini. (es. <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;span&gt;</code>)</td></tr>
+<tr><td><strong>Liste</strong></td><td>Liste numerate o non numerate. Sono simili agli elementi blocco con una struttura particolare, ideali per definire elenchi o menu (<code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code>)</td></tr>
+</tbody></table>
+<p><img src="https://res.cloudinary.com/practicaldev/image/fetch/s--PwOgBv5_--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/t6vbjui1jm8q52osgfcj.png" alt="Differences between html inline and blocks elements. - DEV Community" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="le-tabelle"><a class="header" href="#le-tabelle">Le tabelle</a></h1>
+<p>Le tabelle sono componenti importanti in HTML. Nate agli inizi del Web per impaginare dati aggregati, si sono poi trasformate in uno strumento indispensabile per gestire i layout grafici, per tornare, già nell’epoca dei CSS, ad essere elementi utilissimi per rappresentare informazioni.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="i-tag-di-base"><a class="header" href="#i-tag-di-base">I tag di base</a></h2>
+<p>Per definire una <strong>tabella “minimale”</strong>, che sia comunque interpretata correttamente dai browser possiamo riprodurre un esempio simile al seguente:</p>
+<pre><code class="language-html">&lt;table&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Colonna 1&lt;/td&gt;
+    &lt;td&gt;Colonna 2&lt;/td&gt;
+  &lt;/tr&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 1,1&lt;/td&gt;
+    &lt;td&gt;Dato 1,2&lt;/td&gt;
+  &lt;/tr&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 2,1&lt;/td&gt;
+    &lt;td&gt;Dato 2,2&lt;/td&gt;
+  &lt;/tr&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 3,1&lt;/td&gt;
+    &lt;td&gt;Dato 3,2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2006/03/12.tabellaminimale.png" alt="img" /></p>
+<p>Nell’esempio riusciamo a definire una griglia formata da righe e colonne, il risultato è piuttosto povero a livello semantico (non distinguiamo ad esempio il nome di una colonna dai suoi valori), ma ci aiuta a presentare i tag di base:</p>
+<table><thead><tr><th>Tag</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong><code>&lt;table&gt;</code></strong></td><td>È il contenitore di tutta la tabella e la definisce</td></tr>
+<tr><td><strong><code>&lt;tr&gt;</code></strong></td><td><em>“table row”</em> Contiene una riga della tabella</td></tr>
+<tr><td><strong><code>&lt;td&gt;</code></strong></td><td><em>“table data”</em> Una cella che contiene i valori all’interno di una riga</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="il-template-di-una-tabella-caption-thead-tbody-tfoot"><a class="header" href="#il-template-di-una-tabella-caption-thead-tbody-tfoot">Il template di una tabella: caption, thead, tbody, tfoot</a></h2>
+<p>Per scrivere una tabella che fornisca una rappresentazione più chiara dei dati introduciamo un template leggermente più ricco:</p>
+<pre><code class="language-html">&lt;table&gt;
+&lt;caption&gt;
+	&lt;p&gt;I miei dati&lt;/p&gt;
+&lt;/caption&gt;
+&lt;thead&gt;
+	&lt;tr&gt;
+    &lt;th&gt;Colonna 1&lt;/th&gt;
+    &lt;th&gt;Colonna 2&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tfoot&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Totale 1&lt;/td&gt;
+    &lt;td&gt;Totale 2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;tbody&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 1,1&lt;/td&gt;
+    &lt;td&gt;Dato 1,2&lt;/td&gt;
+  &lt;/tr&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 2,1&lt;/td&gt;
+    &lt;td&gt;Dato 2,2&lt;/td&gt;
+  &lt;/tr&gt;
+	&lt;tr&gt;
+    &lt;td&gt;Dato 3,1&lt;/td&gt;
+    &lt;td&gt;Dato 3,2&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2006/03/12.tabellacompleta.png" alt="img" /></p>
+<p>I tag introdotti sono tutti definiti come “facoltativi”, nel senso che la tabella non si “rompe” se manca uno di essi. Tuttavia si tratta di elementi fondamentali per la semantica delle tabelle. Esaminiamoli:</p>
+<table><thead><tr><th>Tag</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong><code>&lt;caption&gt;</code></strong></td><td>È una didascalia che ci permette di dare una contestualizzazione ai dati e rendere più chiaro il loro significato.</td></tr>
+<tr><td><strong><code>&lt;thead&gt;</code></strong></td><td>Serve per raggruppare le righe che rappresentano l’intestazione della tabella.</td></tr>
+<tr><td><strong><code>&lt;th&gt;</code></strong></td><td><em>“table header”</em> Indica una cella che contiene un intestazione (ad esempio il titolo di una colonna o di una riga) e serve a dare una definizione dei dati cui si riferisce.</td></tr>
+<tr><td><strong><code>&lt;tbody&gt;</code></strong></td><td>Raggruppa le righe che contengono il corpo della tabella, spesso con i dati veri e propri.</td></tr>
+<tr><td><strong><code>&lt;tfoot&gt;</code></strong></td><td>Racchiude le righe che utilizziamo come footer della tabella, in cui si possono inserire dei dati di riepilogo, somme, medie, etc.</td></tr>
+</tbody></table>
+<p>Interessante notare che <em>thead</em>, <em>tbody</em> e <em>tfoot</em>, creano dei <strong>raggruppamenti di righe</strong> e che <em>tfoot</em> può apparire, nel markup, anche prima del <em>tbody</em>, questo per consentire ai crowler di leggere prima i dati di sintesi e poi le informazioni più granulari.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="raggruppare-celle-con-rowspan-e-colspan"><a class="header" href="#raggruppare-celle-con-rowspan-e-colspan">Raggruppare celle con rowspan e colspan</a></h2>
+<ul>
+<li>
+<h3 id="colspan"><a class="header" href="#colspan">colspan</a></h3>
+</li>
+</ul>
+<p>Prendiamo ad esempio una tabella 3×3 un cui vogliamo che una riga abbia una intestazione che valga per 2 colonne:</p>
+<pre><code class="language-html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th colspan=&quot;2&quot;&gt;double head&lt;/th&gt;
+			&lt;th&gt;head&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/13-colspan.png" alt="colspan" /></p>
+<p>Per ottenere una cella che occupi più colonne utilizziamo l’attributo <strong>colspan</strong> che si applica a <code>td</code> e a <code>th</code> come nel nostro caso. In questo modo ad esempio abbiamo indicato un header che vale per entrambe le colonne sottostanti.</p>
+<p>Importante notare che, poiché la nostra casella occupa due posti, per completare le tre colonne basterà aggiungere solo un altro <code>th</code>.</p>
+<p>Per completezza facciamo anche un <strong>esempio con td e colspan</strong>, creando un’ipotetica scheda per la palestra:</p>
+<pre><code class="language-html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+      &lt;th&gt;Lunedì&lt;/th&gt;
+      &lt;th&gt;Mercoledì&lt;/th&gt;
+      &lt;th&gt;Venerdì&lt;/th&gt;
+    &lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+      &lt;td colspan=&quot;3&quot;&gt;Cyclette&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;Esercizi spalle&lt;/td&gt;
+      &lt;td&gt;Pettorali&lt;/td&gt;
+      &lt;td&gt;Tricipiti&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;Squat&lt;/td&gt;
+      &lt;td&gt;Estensioni gambe&lt;/td&gt;
+      &lt;td&gt;Polpacci&lt;/td&gt;
+    &lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/13-colspan-scheda.png" alt="colspan-scheda" /></p>
+<ul>
+<li>
+<h3 id="rowspan"><a class="header" href="#rowspan">rowspan</a></h3>
+</li>
+</ul>
+<p>Per ottenere una cella che si estenda su più di una riga utilizziamo l’attributo <strong>rowspan</strong> in modo del tutto simile a quanto fatto con <code>colspan</code>:</p>
+<pre><code class="language-html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+      &lt;th&gt;head&lt;/th&gt;
+      &lt;th&gt;head&lt;/th&gt;
+      &lt;th&gt;head&lt;/th&gt;
+    &lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+      &lt;td rowspan=&quot;2&quot;&gt;double row cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+		&lt;tr&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+      &lt;td&gt;cell&lt;/td&gt;
+    &lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+<p><img src="https://static.html.it/app/uploads/2016/05/13-rowspan.png" alt="rowspan" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="i-link-in-html-lipertesto"><a class="header" href="#i-link-in-html-lipertesto">I link in HTML, l’ipertesto</a></h1>
+<h3 id="cosè-un-link"><a class="header" href="#cosè-un-link">Cos'è un link?</a></h3>
+<p>Un link è un collegamento, generalmente fra la pagina di un sito e un’altra.</p>
+<p>Si riconosce perché solitamente ha un colore diverso rispetto al resto del testo e perché passandoci sopra col mouse un link cambia aspetto.</p>
+<p>Quando viene cliccato, un link, o <strong>collegamento</strong>, rimanda a un’altra pagina web, ma può anche rimandare a un file da scaricare, a un paragrafo di quella stessa pagina, oppure può attivare funzioni particolari.</p>
+<p>Cliccando un link si può finire anche su un altro sito web, diverso da quello di partenza.</p>
+<p>I links sono un ottimo sistema per passare da una pagina web all’altra, per approfondire un argomento e per raggiungere risorse e siti diversi in modo rapido e diretto, senza dover ogni volta scrivere “<em><strong>www.nome del sito.it/nome-della-pagina</strong></em>” nella barra degli indirizzi.</p>
+<p>Quello che comunemente viene chiamato <em>link</em>, anche in italiano, è in realtà l’abbreviazione di <em><strong>hyperlink</strong></em>, o collegamento ipertestuale.</p>
+<h3 id="tag-a"><a class="header" href="#tag-a">Tag <code>&lt;a&gt;</code></a></h3>
+<pre><code class="language-html">&lt;a href=&quot;https://www.nomeSito.it&quot;&gt;Nome sito&lt;/a&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="attributo-href"><a class="header" href="#attributo-href">Attributo <code>href</code></a></h3>
+<p>L'<strong>attributo HREF</strong> del tag <strong>a</strong> ( HTML ) consente di indicare la risorsa di destinazione in un collegamento ipertestuale. L'<strong>attributo HREF</strong> è uno degli <strong>attributi</strong> fondamentali del tag A. Il valore dell'<strong>attributo HREF</strong> è generalmente un indirizzo che identifica l'ubicazione della risorsa ( pagina html, file, ecc. )</p>
+<p>Di seguito alcuni esempi:</p>
+<pre><code class="language-html">&lt;a href=&quot;https://www.nomeSito.it&quot;&gt;Vai al sito&lt;/a&gt;
+</code></pre>
+<pre><code class="language-html">&lt;a href=&quot;mailto:tuaMail@nomeTuoSito.it&quot;&gt;Invia una email&lt;/a&gt;.
+</code></pre>
+<pre><code class="language-html">&lt;a href=&quot;https://www.mioSito.it/file.pdf&quot;&gt;Scarica il file&lt;/a&gt;.
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="attributo-target"><a class="header" href="#attributo-target">Attributo <code>target</code></a></h3>
+<p>Ad ogni link è possibile aggiungere l’attributo <strong>target</strong> che specifica dove destinare l’apertura di un link, infatti è possibile aprire un collegamento nella stessa finestra o in una nuova finestra del browser, alcuni dei valori consentiti sono:</p>
+<ul>
+<li><strong>_self</strong>, che apre il collegamento nella stessa finestra o scheda (IMPOSTAZIONE DI DEFAULT)</li>
+</ul>
+<pre><code class="language-html">&lt;a href=&quot;https://www.nomeSito.it&quot; target=&quot;_self&quot;&gt;Nome sito&lt;/a&gt;
+</code></pre>
+<ul>
+<li><strong>_blank</strong>, che apre il collegamento in una nuova finestra o scheda</li>
+</ul>
+<pre><code class="language-html">&lt;a href=&quot;https://www.nomeSito.it&quot; target=&quot;_blank&quot;&gt;Nome sito&lt;/a&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="link-a-file-e-documenti"><a class="header" href="#link-a-file-e-documenti">Link a file e documenti</a></h3>
+<p>È indifferente che la destinazione dell’ancora sia una pagina HTML di un sito, un’immagine, un file pdf, un file zip, o un file exe: il meccanismo del link funziona allo stesso modo indipendentemente dal tipo di risorsa; poi il browser si comporterà in modo differente a seconda della risorsa. Ad esempio:</p>
+<table><thead><tr><th>Tipologia</th><th>Comportamento standard</th></tr></thead><tbody>
+<tr><td><strong>Immagine .gif, .jpg, .png</strong></td><td>Viene visualizzata nel browser</td></tr>
+<tr><td><strong>Documento .html, .pdf, .doc</strong></td><td>La pagina è visualizzata nel browser. Nel caso dei documenti come <code>.doc</code> e <code>.pdf</code> l’utente potrebbe adver bisogno di installare un apposito plugin, anche se quasi sempre questi formati sono interpretati dal browser stesso (nel caso peggiore è sufficiente avere installati rispettivamente Microsoft Word e Adobe Acrobat Reader). Se non è installato il plugin il sistema chiederà all’utente se salvare il file.</td></tr>
+<tr><td><strong>File .zip, file .exe</strong></td><td>Viene chiesto all’utente di scaricare il file</td></tr>
+</tbody></table>
+<p><em><strong>Nota:</strong> per motivi di sicurezza il download di un file (specie se <code>.exe</code>) può essere bloccato da un antivirus o da un firewall.</em></p>
+<h3 id="link-a-file"><a class="header" href="#link-a-file">Link a file</a></h3>
+<pre><code class="language-html">&lt;a href=&quot;https://www.mioSito.it/html/html_tutorial.pdf&quot;&gt;HTML Tutorial&lt;/a&gt;.
+</code></pre>
+<p>Che dà come risultato: <a href="https://www.tutorialspoint.com/html/html_tutorial.pdf">HTML Tutorial</a></p>
+<h3 id="link-invio-mail"><a class="header" href="#link-invio-mail">Link invio mail</a></h3>
+<p>È anche possibile specificare un <strong>indirizzo email come link</strong>. In questo caso si aprirà direttamente il client di posta dell’utente con l’indirizzo email pre-impostato. La sintassi è la seguente:</p>
+<pre><code class="language-html">&lt;a href=&quot;mailto:tuaMail@nomeTuoSito.it&quot;&gt;
+Invia una email
+&lt;/a&gt;.
+</code></pre>
+<p>Che dà come risultato: <a href="mailto:tuamail@nomeTuoSito.it">Invia una e-mail</a></p>
+<h3 id="link-per-invio-chiamata"><a class="header" href="#link-per-invio-chiamata">Link per invio chiamata</a></h3>
+<p>Con l'avvento di HTML 5 è possibile inserire dei link a dei numeri di telefono utilizzando una semplice variante della comune sintassi del tag <code>&lt;a&gt;</code>, cioè:</p>
+<pre><code class="language-html">&lt;a href=&quot;tel:+390123456789&quot;&gt;
+  Chiama +39.0123.456789!
+&lt;/a&gt;
+</code></pre>
+<p>Che dà come risultato: <a href="tel:+390123456789">Chiama +39.0123.456789!</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="link-interni-o-anchor-link"><a class="header" href="#link-interni-o-anchor-link">Link interni o anchor link</a></h3>
+<p>Con il termine <strong>ancora HTML</strong> intendiamo i link che collegano sezioni diverse della stessa pagina web. A differenza di altri link non lasci la pagina ma rimani sulla stessa risorsa. Per creare una relazione bisogna usare indicare un punto di arrivo. E ovviamente uno di partenza.</p>
+<p>Per creare un link all’interno della stessa pagina, per <strong>collegare due sezioni</strong> differenti e generare un indice generico o una scorciatoia, hai bisogno di due elementi essenziali:</p>
+<ul>
+<li>Un’ancora che faccia da arrivo.</li>
+<li>Un link che si basi su un anchor text.</li>
+</ul>
+<p>Il primo passaggio avviene attraverso l’attributo name che forma una sorta di etichetta da richiamare poi con il <strong>classico href</strong> (Hypertext REFerence). Quindi, per creare un’ancora interna bisogna procedere in questo modo con il codice HTML, ecco la soluzione con i relativi tag:</p>
+<pre><code class="language-html">&lt;a href=&quot;#arrivo&quot;&gt;Partenza&lt;/a&gt;
+&lt;a name=&quot;arrivo&quot;&gt;Arrivo&lt;/a&gt;
+</code></pre>
+<p>Come puoi ben vedere il link href porta su una sezione della pagina contraddistinta con un’etichetta che viene data dal name. Il link viene formato grazie all’<strong>inserimento del cancelletto</strong> prima della parola scelta per creare il punto di arrivo che verrà indicato anche nell’URL della pagina web. </p>
+<p>Ecco l’esempio dell’indirizzo verso un segnalibro specifico.</p>
+<pre><code class="language-html">&lt;a href=&quot;https://www.mioSito.it/permalink#arrivo&quot;&gt;Link interno alla pagina&lt;/a&gt;.
+</code></pre>
+<p>Il simbolo di cancelletto (#) porta il browser su un’area specifica della risorsa. Si usa, dal punto di vista tecnico, per <strong>separare l’URI</strong> da un identificatore relativo a una sezione.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="i-percorsi-assoluti-e-relativi-in-html"><a class="header" href="#i-percorsi-assoluti-e-relativi-in-html">I percorsi assoluti e relativi in HTML</a></h1>
+<p>Finché le dimensioni dei progetti (specie siti web) sono ridotte e contano poche pagine possiamo anche ipotizzare di lasciare tutti i file in una medesima cartella. È evidente però che ‐ man mano che il progetto cresce ‐ avremo bisogno di un maggior ordine.</p>
+<p>Si presenterà allora l’esigenza di inserire le immagini in cartelle diverse (in modo da averle tutte nella medesima locazione) e forse sarà opportuno dividere il sito in varie sezioni, in modo da avere tutti i documenti dello stesso tipo all’interno di un contesto omogeneo.</p>
+<p>I progetti HTML e i siti web sono dunque organizzati in strutture ordinate: non a caso si parla di <strong>albero di un sito</strong>, per indicare la visualizzazione della struttura alla base del sito.</p>
+<p>Poiché l’organizzazione di un sito in directory e sottodirectory è una cosa normalissima, dobbiamo imparare a muoverci tra i vari file che costituiscono il sito stesso, in modo da essere in grado di creare collegamenti verso i documenti più reconditi, destreggiandoci tra le strutture più ramificate.</p>
+<p>Per farlo possiamo utilizzare due modalità:</p>
+<ul>
+<li><strong>indicare un percorso assoluto</strong></li>
+<li><strong>indicare un percorso relativo</strong></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="percorsi-assoluti"><a class="header" href="#percorsi-assoluti">Percorsi assoluti</a></h2>
+<p>Descrivere un <strong>percorso assoluto</strong> significa indicare per esteso l’indirizzo di un certo documento, elencando tutte le directory e sottodirectory che dobbiamo attraversare per raggiungerlo. Per comprendere meglio esaminiamo questo indirizzo:</p>
+<pre><code class="language-html">Leggi le guide sui
+&lt;a href=&quot;https://www.mioSito.it/css/fogli-stile.html&quot;&gt;fogli di stile&lt;/a&gt;
+</code></pre>
+<p>Il link indica un percorso assoluto e fa riferimento ad una particolare directory. Nella fattispecie:</p>
+<table><thead><tr><th><strong>http://</strong></th><th>Indica al browser di utilizzare il protocollo per navigare nel web (l’http)</th></tr></thead><tbody>
+<tr><td><strong>www.mioSito.it/</strong></td><td>Indica di fare riferimento al sito www.mioSito.it</td></tr>
+<tr><td><strong>css/</strong></td><td>Indica che la risorsa indicata si trova all’interno della cartella “css”</td></tr>
+<tr><td><strong>fogli-stile.html</strong></td><td>Indica che il file da collegare è quello chiamato “fogli-stile.html”</td></tr>
+</tbody></table>
+<p>Per semplificare possiamo anche dire che un collegamento assoluto è l’url che normalmente troviamo nella barra degli indirizzi.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="percorsi-relativi"><a class="header" href="#percorsi-relativi">Percorsi relativi</a></h2>
+<p>Spesso ci capita tuttavia a fare riferimento a documenti situati all’interno del progetto (o del sito), e ‐ sviluppando sul nostro computer (cioè “in locale”) ‐ magari non abbiamo ancora un indirizzo web e non sappiamo di conseguenza come impostare i percorsi. È utile allora capire come funzionano i percorsi relativi.</p>
+<p>I <strong>percorsi relativi</strong> fanno riferimento alla posizione degli altri file rispetto al documento in cui ci si trova in quel momento. Per linkare due pagine che si trovano all’interno della stessa directory è sufficiente scrivere:</p>
+<pre><code class="language-html">&lt;a href=&quot;paginaDaLinkare.html&quot;&gt;
+collegamento alla pagina da linkare nella stessa directory della pagina presente
+&lt;/a&gt;
+</code></pre>
+<p>Poniamo ora di trovarci in una situazione di questo genere:</p>
+<p>Figura 1. Riferimento a pagina di una sottodirectory</p>
+<p><img src="https://static.html.it/app/uploads/documenti/guide/esempi/guida_html/esempi/link/link1.gif" alt="Riferimento a pagina di una sottodirectory" /></p>
+<p>Dalla pagina <code>index.html</code> vogliamo cioè far riferimento al file <code>interna.html</code>, che si trova nella directory <code>interna</code>, che a sua volta si trova all’interno della directory <code>prima</code>.</p>
+<p>La sintassi è la seguente:</p>
+<pre><code class="language-html">&lt;a href=&quot;prima/interna/interna.html&quot;&gt;Visita la pagina interna&lt;/a&gt;
+</code></pre>
+<p>Vediamo adesso l’esempio opposto: dalla pagina interna vogliamo far riferimento a una pagina (<code>index.html</code>) che si trova più in alto di due livelli:</p>
+<p>Figura 2. Riferimento a pagina in una directory di livello superiore</p>
+<p><img src="https://static.html.it/app/uploads/documenti/guide/esempi/guida_html/esempi/link/link2.gif" alt="Riferimento a pagina in una directory di livello superiore" /></p>
+<p>La sintassi è la seguente:</p>
+<pre><code class="language-html">&lt;a href=&quot;../../index.html&quot;&gt;Visita la pagina interna&lt;/a&gt;
+</code></pre>
+<p>Come si vede, con i percorsi relativi valgono le seguenti <strong>regole generali</strong>:</p>
+<ol>
+<li>Per far riferimento a un file che si trovi all’interno della stessa directory basta linkare il nome del file:</li>
+</ol>
+<pre><code class="language-html">&lt;a href=&quot;paginaDaLinkare.html&quot;&gt;collegamento alla pagina&lt;/a&gt;
+</code></pre>
+<ol start="2">
+<li>Per far riferimento a un file contenuto in una cartella di livello inferiore alla posizione corrente, basta nominare la cartella seguita dal carattere <code>/</code> (slash), e poi il nome del file. Secondo la formula: <code>cartella/nomeFile.htm</code>:</li>
+</ol>
+<pre><code class="language-html">&lt;a href=&quot;prima/interna/interna.html&quot;&gt;Visita la pagina interna&lt;/a&gt;
+</code></pre>
+<ol start="3">
+<li>Per tornare su di un livello, è sufficiente utilizzare la notazione: <code>../nomeFile.html</code></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="multimedia"><a class="header" href="#multimedia">Multimedia</a></h1>
+<p>Le pagine web contengono spesso elementi multimediali di diverso tipo e formato.</p>
+<p>I primi browser Web supportavano solo il testo, limitato a un singolo carattere in un unico colore.</p>
+<p>Successivamente sono arrivati i browser che supportavano una moltitudine di colori, caratteri, immagini e contenuti multimediali!</p>
+<p>Tra i più importanti vedremo come gestire le immagini, i file video, i file audio, le mappe</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="immagini"><a class="header" href="#immagini">Immagini</a></h2>
+<p>Le <strong>immagini</strong> in una pagina HTML hanno un ruolo fondamentale. Esistono diversi formati grafici e molti software di elaborazione grafica da sfruttare a seconda dei casi: diagrammi e grafici, fotografie, icone ed elementi del layout.</p>
+<h3 id="tag-img"><a class="header" href="#tag-img">Tag <code>&lt;img&gt;</code></a></h3>
+<p>Il tag <strong><code>&lt;img&gt;</code></strong> rappresenta il principale elemento per inserire un’immagine in una pagina HTML. La sintassi minima è la seguente:</p>
+<pre><code class="language-html">&lt;img src=&quot;https://miosito.it/miaImmagine.png&quot; alt=&quot;Mia Immagine&quot;&gt;
+</code></pre>
+<p>Anzitutto notiamo che il tag <code>&lt;img&gt;</code> è un tag senza un contenuto, per questo non ha un elemento <em><code>&lt;/img&gt;</code></em> di chiusura. Esaminiamo il significato delle keyword e degli attributi principali:</p>
+<table><thead><tr><th>Keyword</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong>img</strong></td><td>È il nome del tag, abbreviazione di <em>image</em> (immagine)</td></tr>
+<tr><td><strong>src</strong></td><td>Sta per <em>source</em> (origine), è l’indirizzo (URL) del file che vogliamo mostrare. Può essere sia un'immagine presente sulla directory del nostro sito, ma anche una url di un sito esterno</td></tr>
+<tr><td><strong>alt</strong></td><td>È il <em>testo alternativo</em>, ovvero il testo che appare se, per qualche motivo, il client non riesce a mostrare l’immagine. Possiamo anche omettere questo attributo, ma risulta utile per l’accessibilità e per i motori di ricerca</td></tr>
+<tr><td><strong>title</strong></td><td><em>(Opzionale inserirlo)</em> È il <em>titolo</em> dell'immagine che di solito viene mostrato di default sotto l'immagine stessa</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="attributo-src"><a class="header" href="#attributo-src">Attributo <code>src</code></a></h3>
+<p>Come abbiamo detto, nell’attributo <code>src</code> specifichiamo qual è l’origine dell’immagine. Tipicamente inseriamo una URL, o un percorso che punti ad un file.</p>
+<h4 id="file-percorsi-relativi-e-assoluti"><a class="header" href="#file-percorsi-relativi-e-assoluti">File, percorsi relativi e assoluti</a></h4>
+<p>Resta valido il discorso dei percorsi relativi ed assoluti visto per i link. </p>
+<p>Abbiamo già visto come inserire un'immagine quando il file dell’immagine si trova nella stessa cartella del file HTML, piuttosto che in una sottocartella.</p>
+<p>Sarà quindi possibile riferirsi a file che si trovano su cartelle o siti diversi in questo modo:</p>
+<p>Immagine che si trova nella stessa cartella del file HTML: </p>
+<pre><code class="language-html">&lt;img src=&quot;miaImmagine.jpg&quot; alt=&quot;Mia Immagine&quot;&gt;
+</code></pre>
+<p>Immagine che si trova in una sotto-cartella del file HTML che si chiama ad esempio <em>img</em>: </p>
+<pre><code class="language-html">&lt;img src=&quot;img/miaImmagine.jpg&quot; alt=&quot;Mia Immagine&quot;&gt;
+</code></pre>
+<p>Immagine che si trova su siti esterni:</p>
+<pre><code class="language-html">&lt;img src=&quot;https://www.iisbassi.edu.it/miaImmagine.jpg&quot; alt=&quot;Mia Immagine&quot;&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lattributo-alt"><a class="header" href="#lattributo-alt">L’attributo <code>alt</code></a></h2>
+<p>L’attributo <strong>alt</strong> è utile per specificare un <strong>testo alternativo</strong> (<em>alternative text</em>), questo testo non viene mostrato se non in alcune occasioni:</p>
+<ul>
+<li>Quando l’immagine non può essere caricata;</li>
+<li>A volte durante il caricamento dell’immagine;</li>
+<li>Nei browser testuali (come <a href="http://lynx.invisible-island.net/lynx.html">lynx</a>) che non mostrano proprio le immagini;</li>
+<li>Nei dispositivi per ipovedenti (screen-reader).</li>
+</ul>
+<p>È facile comprendere come l’attributo <strong>alt</strong> sia di estrema utilità per rendere il <strong>sito accessibile</strong> a tutti gli utenti anche quando le loro condizioni fisiologiche o le loro possibilità di connessione non permettano di fruire delle immagini.</p>
+<h2 id="attributo-title"><a class="header" href="#attributo-title">Attributo <code>title</code></a></h2>
+<p>Alcuni browser (desktop, non mobile) mostrano un tooltip con il testo contenuto nell’<strong>attributo title</strong>, se lo trovano su un link o su una immagine e se l’utente vi si sofferma sopra con il mouse (mouseover). Aggiungere attributi <code>title</code> è comunque un’opzione per aggiungere maggior informazione all’immagine.</p>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="immagini-e-link"><a class="header" href="#immagini-e-link">Immagini e link</a></h2>
+<p>Possiamo inserire un’immagine direttamente in un link per renderne più chiaro il significato. Farlo a questo punto risulta veramente banale:</p>
+<pre><code class="language-html">&lt;a href=&quot;https://www.mioSito.it&quot;&gt;
+		&lt;img src=&quot;miaImmagine.png&quot;&gt;
+&lt;/a&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="i-formati-di-immagine"><a class="header" href="#i-formati-di-immagine">I formati di immagine</a></h3>
+<p>Attraverso l’attributo <em>src</em> possiamo caricare diversi tipi di immagine, sia bitmap (o raster), sia vettoriale. Ecco quali sono i formati più importanti:</p>
+<table><thead><tr><th>Formato</th><th>Descrizione</th></tr></thead><tbody>
+<tr><td><strong>JPG</strong></td><td>(o JPEG) È il formato più utilizzato per le foto, ideato dal <strong>Joint Photographic Experts Group</strong> (da cui l’acronimo) per ridurre lo spazio occupato da bitmap complesse e di grandi dimensioni. L’algoritmo è di tipo <strong>lossy</strong>, cioè a “perdita di informazione”: per ottenere file leggeri in termini di KB si effettuano dei campionamenti e si rinuncia alla qualità dell’immagine. Utilizzando JPG si cerca sempre un buon compromesso tra peso e qualità dell’immagine.</td></tr>
+<tr><td><strong>GIF</strong></td><td>(<strong>Graphic Interchange Format</strong>): le immagini GIF hanno una tavolozza che non supera i 256 colori. È possibile ottimizzare il peso questo tipo di file riducendo ancora il numero di colori. GIF inoltre consente di <strong>impostare trasparenze</strong> il ché in passato rendeva questo formato idoneo alla creazione di piccoli elementi di layout. Oggi una delle applicazioni più frequenti di questo formato è la rappresentazione di piccoli video (<strong>GIF animate</strong>) da utilizzare come sfondi animati delle pagine o da condividere sui social network.</td></tr>
+<tr><td><strong>PNG</strong></td><td>(<strong>Portable Network Graphic</strong>). Il PNG è un tipo di immagine introdotto più recentemente, elaborato dal <a href="http://www.w3c.org/">W3C</a> per risolvere i problemi di copyright del formato GIF (che è invece proprietario); tuttavia oggi il PNG è letto oramai da tutti i browser e offre alcune caratteristiche che gli altri formati non hanno (come il supporto al <strong>canale alfa</strong>, caratteristica questa non ancora perfettamente supportata da ogni browser). PNG permette sia di rappresentare immagini di qualità fotografica (<strong>PNG24</strong>), sia di ottimizzare colori in modo simile a GIF (<strong>PNG8</strong> – 256 colori).</td></tr>
+<tr><td><strong>SVG</strong></td><td>(<strong>Scalable Vector Graphics</strong>): è un formato vettoriale e per questo può scalare senza perdita di definizione. Molto utilizzato soprattutto per icone, elementi del layout e grafici dinamici.</td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="altri-formati-multimediali"><a class="header" href="#altri-formati-multimediali">Altri formati multimediali</a></h2>
+<p>Gli elementi multimediali (come audio o video) sono archiviati nei file multimediali.</p>
+<p>Il modo più comune per scoprire il tipo di un file è guardare l'estensione del file.</p>
+<p>I file multimediali hanno formati ed estensioni diverse come: .wav, .mp3, .mp4, .mpg, .wmv e .avi.</p>
+<ul>
+<li>
+<h4 id="formati-video-comuni"><a class="header" href="#formati-video-comuni">Formati video comuni</a></h4>
+<p>I formati video più comuni supportati da HTML sono: MP4, WebM e Ogg </p>
+</li>
+<li>
+<h4 id="formati-audio-comuni"><a class="header" href="#formati-audio-comuni">Formati audio comuni</a></h4>
+<p>MP3 è considerato il miglior formato per la musica digitale, è un formato compresso che bene si presta all'utilizzo sul web per le sue dimensioni ridotte. </p>
+<p>Altre tipologie di file audio sono: wav, mid, rm, ecc.</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="includere-file-audio"><a class="header" href="#includere-file-audio">Includere file audio</a></h3>
+<p>HTML5 ha introdotto un nuovo tag <strong><code>&lt;audio&gt;</code></strong> pensato proprio per questa esigenza.</p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source src=&quot;musica.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+&lt;/audio&gt;
+</code></pre>
+<ul>
+<li>Attributo <strong><code>controls</code></strong> : la sua presenza garantisce la presenza dei controlli utente per gestire la riproduzione del file audio. Omettere l’attributo <code>controls</code> ci permette, di fatto, di <strong>inserire un file audio in background</strong></li>
+</ul>
+<p>Altri attributi utilizzati di frequente per il tag <code>&lt;audio&gt;</code> sono:</p>
+<ul>
+<li>
+<p><code>autoplay</code> forza l’audio ad essere eseguito automaticamente</p>
+</li>
+<li>
+<p><code>loop</code>fa sì che esso venga automaticamente riprodotto a ciclo continuo</p>
+</li>
+</ul>
+<h5 id="tag-source"><a class="header" href="#tag-source">Tag <code>&lt;source&gt;</code></a></h5>
+<p>All’interno del tag <code>&lt;audio&gt;</code> vi è poi un elemento di tipo <code>&lt;source&gt;</code>, mediante il quale possiamo specificare il file che ci interessa riprodurre.</p>
+<p>Poichè alcuni tipi di file non sono supportati da tutti i browser, è possibile specificare diversi tag <code>&lt;source&gt;</code>. Ad esempio:</p>
+<pre><code class="language-html">&lt;audio controls&gt;
+  &lt;source src=&quot;musica.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+  &lt;source src=&quot;musica2.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+Il browser non supporta il tag audio
+&lt;/audio&gt;
+</code></pre>
+<p>In questo caso, il browser tenterà per prima cosa di riprodurre il file specificato nel primo tag <code>&lt;source&gt;</code>. Se (e solo se), per qualche motivo, il file non potesse essere riprodotto, il browser proverà a riprodurre il secondo file, e così via per tutti i tag <code>&lt;source&gt;</code></p>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="includere-file-video"><a class="header" href="#includere-file-video">Includere file video</a></h3>
+<p>HTML5, insieme al tag audio ha  introdotto, quasi in modo naturale, un altro tag di uso molto simile, e pensato proprio per la riproduzione di filmati e clip: il tag <strong><code>&lt;video&gt;</code></strong></p>
+<pre><code class="language-html">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+&lt;/video&gt;
+</code></pre>
+<p>Anche in questo caso, come visto per il tag audio, è presente un attributo <strong><code>controls</code></strong>, la cui presenza specifica la necessità di visualizzare i controlli utente per gestire la riproduzione del video. Insieme a <code>controls</code>, gli attributi <strong><code>width</code></strong> ed <strong><code>height</code></strong> permettono di specificare la dimensione del video.</p>
+<p>Come per il tago audio, anche per il tag <code>&lt;video&gt;</code> ci sono gli attributi  <code>autoplay</code> e <code>loop</code>: il primo forza l’esecuzione automatica del video, mentre il secondo fa sì che esso venga automaticamente riprodotto a ciclo continuo</p>
+<p>Utilizzare più tag <code>&lt;source&gt;</code> ci permette di specificare quali file devono essere riprodotti nel caso in cui ci siano problemi di incompatibilità con il browser. Consideriamo, per esempio, il codice seguente:</p>
+<pre><code class="language-html">&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+    &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;video.ogg&quot; type=&quot;video/ogg&quot;&gt;
+Il browser non supporta il tag video
+&lt;/video&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h3 id="integrare-google-maps-nel-codice-html"><a class="header" href="#integrare-google-maps-nel-codice-html">Integrare Google Maps nel codice HTML</a></h3>
+<p>I siti web che necessitano dell'integrazione di una mappa personalizzata sono oggigiorno tantissimi: basti pensare al sito di una qualsiasi azienda o attività locale per capire immediatamente qual'è la portata di questo tipo di servizio e quanto può essere importante essere in grado di integrare, correttamente, una mappa dinamica all'interno di un sito web.</p>
+<p>Come già detto, per raggiungere il nostro scopo, usufruiremo del servizio <strong>Google Maps</strong> che, oltre ad essere il più conosciuto ed utilizzato sistema di questo tipo, offre un metodo facile ed immediato per effettuare l'operazione di <strong>incorporazione di una mappa</strong> all'interno di una qualsiavoglia pagina web.</p>
+<h4 id="1-ottenere-la-mappa"><a class="header" href="#1-ottenere-la-mappa">1. Ottenere la mappa</a></h4>
+<p>Per prima cosa, quindi, rechiamoci sul sito Google Maps all'indirizzo <a href="http://maps.google.it/">maps.google.it</a> ed effettuiamo la ricerca di nostro interesse. Ai fini del nostro esempio andremo a localizzare sulla mappa un ipotetico negozio situato in piazza Duomo n.1 a Milano.</p>
+<p><img src="https://www.mrw.it/img/upl/primipassi_google-maps/1.jpg" alt="selezioniamo un luogo sulla mappa" /></p>
+<p>Una volta identificato il lugo di nostro interesse non dovremo fare altro che cliccare sul pulsante &quot;Condividi&quot;</p>
+<p><img src="https://www.mrw.it/img/upl/primipassi_google-maps/2.jpg" alt="clicchiamo sul pulsante Condividi" /></p>
+<p>nella finestra a comparsa, selezionare la voce <strong>Incorpora Mappa</strong>:</p>
+<p><img src="https://www.mrw.it/img/upl/primipassi_google-maps/3.jpg" alt="selezioniamo l'etichetta Incorpora Mappa" /></p>
+<p>Il codice che ci viene fornito è quello di un comune &lt;iframe&quot; che possiamo personalizzare nelle dimensioni agendo sul pulsante di selezione situato sulla nostra sinistra: così facendo ci verranno mostrate diverse opzioni relativamente alla dimensione della mappa (piccola, media, grande oppure dimensione personalizzata). Cliccando sull'opzione &quot;Dimensione personalizzata&quot; potremo impostare a piacimento le dimensioni (in pixel) della mappa che andremo ad integrare sul nostro sito web.</p>
+<p><img src="https://www.mrw.it/img/upl/primipassi_google-maps/4.jpg" alt="Personalizziamo le dimensioni della mappa da incorporare nel sito" /></p>
+<h4 id="2-integrare-la-mappa-nella-pagina-web"><a class="header" href="#2-integrare-la-mappa-nella-pagina-web">2. Integrare la mappa nella pagina web</a></h4>
+<p>Una volta ottenuto il <strong>codice HTML della mappa</strong> non dovremo fare altro che copiarlo ed incollarlo nel punto della nostra pagina web in cui desideriamo appaia la cartina dinamica.</p>
+<pre><code class="language-html">&lt;iframe src=&quot;https://www.google.com/maps/embed?....&quot; width=&quot;600&quot; height=&quot;450&quot; style=&quot;border:0;&quot; allowfullscreen=&quot;&quot; loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<h4 id="3-mappe-responsive"><a class="header" href="#3-mappe-responsive">3. Mappe responsive</a></h4>
+<p>Trattandosi di un iframe è opportuno verificare attentamente che le dimensioni impostate per la mappa siano compatibili con gli ingombri previsti in fase di web-design della pagina: se, ad esempio, abbiamo previsto che l'elemento contenitore della mappa (un DIV o la cella di una tabella) abbia una larghezza di 500 pixel, dovremo accertarci che l'iframe di Google non ecceda questa dimensione, in caso contrario il risultato - da un punto di vista grafico - potrebbe essere tutt'altro che impeccabile. </p>
+<p>Possiamo dargli un comportamento responsivo ad esempio rimuovendo gli attributi <code>width</code> ed <code>height</code> dal tag <code>iframe</code> ed inserendo invece questo codice CSS nel nostro foglio di stile.</p>
+<pre><code class="language-css">iframe{
+    width: 100%;
+    aspect-ratio: auto 16 / 9;
+    max-height: 70vh;
+}
+</code></pre>
+<ul>
+<li>
+<p><code>width: 100%;</code> - in questo modo la nostra mappa sarà sempre <strong>larga il 100%</strong> del suo contenitore (body, div, ecc). </p>
+</li>
+<li>
+<p><code>aspect-ratio: auto 16 / 9;</code> -  avrà un aspect ratio pari a 16/9 (ma potremmo optare per 4/3 o un qualsiasi altro rapporto che preferiamo), il che significa che avrà un'<strong>altezza variabile a seconda della larghezza</strong> del device dove verrà aperta. </p>
+</li>
+<li>
+<p><code>max-height: 70vh;</code> - Inoltre avrà un'<strong>altezza massima</strong> pari al 70% dell'altezza dello schermo (70vh), in questo modo si avrà la certezza che la mappa sarà comunque tutta visibile nello schermo del nostro device (smartphone, tablet, pc, tv).</p>
+</li>
+</ul>
+<p><a href="https://www.mrw.it/html/inserire-google-maps-sito-web_12214.html">Credits mrw.it</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="form"><a class="header" href="#form">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form"><a class="header" href="#tag-form">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action"><a class="header" href="#action">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method"><a class="header" href="#method">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype"><a class="header" href="#enctype">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input"><a class="header" href="#tag-input">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type"><a class="header" href="#attributo-type">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option"><a class="header" href="#tag-select-e-option">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea"><a class="header" href="#tag-textarea">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-1"><a class="header" href="#form-1">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-1"><a class="header" href="#tag-form-1">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-1"><a class="header" href="#action-1">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-1"><a class="header" href="#method-1">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-1"><a class="header" href="#enctype-1">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-1"><a class="header" href="#tag-input-1">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-1"><a class="header" href="#attributo-type-1">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-1"><a class="header" href="#tag-select-e-option-1">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-1"><a class="header" href="#tag-textarea-1">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-2"><a class="header" href="#form-2">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-2"><a class="header" href="#tag-form-2">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-2"><a class="header" href="#action-2">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-2"><a class="header" href="#method-2">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-2"><a class="header" href="#enctype-2">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-2"><a class="header" href="#tag-input-2">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-2"><a class="header" href="#attributo-type-2">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-2"><a class="header" href="#tag-select-e-option-2">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-2"><a class="header" href="#tag-textarea-2">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-3"><a class="header" href="#form-3">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-3"><a class="header" href="#tag-form-3">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-3"><a class="header" href="#action-3">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-3"><a class="header" href="#method-3">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-3"><a class="header" href="#enctype-3">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-3"><a class="header" href="#tag-input-3">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-3"><a class="header" href="#attributo-type-3">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-3"><a class="header" href="#tag-select-e-option-3">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-3"><a class="header" href="#tag-textarea-3">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-4"><a class="header" href="#form-4">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-4"><a class="header" href="#tag-form-4">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-4"><a class="header" href="#action-4">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-4"><a class="header" href="#method-4">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-4"><a class="header" href="#enctype-4">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-4"><a class="header" href="#tag-input-4">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-4"><a class="header" href="#attributo-type-4">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-4"><a class="header" href="#tag-select-e-option-4">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-4"><a class="header" href="#tag-textarea-4">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-5"><a class="header" href="#form-5">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-5"><a class="header" href="#tag-form-5">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-5"><a class="header" href="#action-5">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-5"><a class="header" href="#method-5">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-5"><a class="header" href="#enctype-5">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-5"><a class="header" href="#tag-input-5">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-5"><a class="header" href="#attributo-type-5">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-5"><a class="header" href="#tag-select-e-option-5">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-5"><a class="header" href="#tag-textarea-5">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" /><div style="break-before: page; page-break-before: always;"></div><h1 id="form-6"><a class="header" href="#form-6">Form</a></h1>
+<p><img src="img/Schermata_2021-11-18_alle_21.52.57.png" alt="img" /></p>
+<h2 id="tag-form-6"><a class="header" href="#tag-form-6">Tag <code>&lt;form&gt;</code></a></h2>
+<p>L'elemento  <strong><code>&lt;form&gt;</code></strong> serve per delimitare un modulo di input per l'inserimento dati. 
+In un documento html possono esserci più moduli ma questi dovranno essere tutti indipendenti fra di loro, nel senso che il tag  non può essere annidato (un modulo all'interno di un altro modulo) come per le tabelle o per altri tags di html. 
+L'elemento form necessita di alcuni attributi per funzionare: **<code>action</code>, <code>method</code> **ed <strong><code>enctype</code></strong></p>
+<ul>
+<li>
+<h3 id="action-6"><a class="header" href="#action-6">action</a></h3>
+<p>L'attributo action è un URL che specifica la locazione a cui vengono inviati i dati del modulo, può essere anche un indirizzo di posta elettronica nel caso in cui i dati del modulo debbano essere inviati dal client di posta di chi lo compila. Se manca l'attributo action viene assunto per default lo stesso URL in cui si trova il modulo. </p>
+</li>
+<li>
+<h3 id="method-6"><a class="header" href="#method-6">method</a></h3>
+<p>L'attributo method specifica il metodo per accedere all'URL dichiarato in action due le possibilità: posto get. Il metodo get viene preferito per quei moduli che non necessitano di elaborazioni esterne. Per tutti gli altri casi si adopera post </p>
+</li>
+<li>
+<h3 id="enctype-6"><a class="header" href="#enctype-6">enctype</a></h3>
+<p>L'attributo enctype specifica il tipo di media utilizzato per codificare i dati del modulo, per default è di tipo MINE (Mine is not Emacs). Un esempio tipo potrebbe essere questo:</p>
+</li>
+</ul>
+<p>Esempio</p>
+<pre><code class="language-html">&lt;form method=&quot;get&quot; action=“pagina.php&quot; enctype=&quot;text/plain&quot; name=&quot;mio_form&quot;&gt;
+</code></pre>
+<h2 id="tag-input-6"><a class="header" href="#tag-input-6">Tag <code>&lt;input&gt;</code></a></h2>
+<p>L'elemento  rappresenta il campo più importante di un modulo. Questo campo, sul quale i dati possono essere introdotti o modificati dall'utente, ha diversi attributi e fra questi vi è <strong>type</strong> dal quale dipende il tipo di controllo che input riesce ad esercitare sul modulo.
+<strong>Attributi</strong> assegnabili all'elemento input:</p>
+<ul>
+<li><strong><code>type</code></strong> - Attributo che definisce il tipo di controllo da assegnare al campo input, per default è text: libero testo; possono essere definiti diversi tipi quali: <strong>text, checkbox, radio, file, email, password, date, reset, submit, button, hidden, image,</strong></li>
+<li><strong><code>name</code></strong> - Attributo che indica un nome univoco per il campo o per un gruppo di file correlati.</li>
+<li><strong><code>placeholder</code></strong> - Breve suggerimento che descrive il valore atteso di un campo di input. Viene visualizzato nel campo di immissione prima che l'utente immetta un valore.</li>
+<li><strong><code>required</code></strong> - Attributo che specifica se è un campo obbligatorio.</li>
+<li><strong><code>value</code></strong> - Attributo che se utilizzato con gli attributi TYPE=... imposta il valore di visualizzazione iniziale di un campo, sia esso testo che numerico.</li>
+<li><strong><code>size</code></strong> - Attributo che specifica le dimensioni del campo in numero di caratteri.</li>
+<li><strong><code>maxlength</code></strong> - Attributo che indica il <strong>numero massimo di caratteri</strong> che possono essere immessi nel campo testo, quindi adoperato con TYPE=<strong>TEXT</strong>. Il numero potrebbe essere anche più grande di quello specificato dall'attributo SIZE, in questo caso il testo scorrerà orizzontalmente, essendo il numero di default illimitato</li>
+<li><strong><code>checked</code></strong> - Attributo che indica la selezione della casella o del pulsante di controllo, quindi adoperato con TYPE=<strong>CHECKBOX</strong> o TYPE=<strong>RADIO</strong>.</li>
+</ul>
+<h3 id="attributo-type-6"><a class="header" href="#attributo-type-6">Attributo <code>type=&quot;...&quot;</code></a></h3>
+<p>L'attributo type relativo al tag <strong>input</strong> indica i tipi di campi assegnabili all'attributo type di input: button checkbox file hidden image password radio reset submit text</p>
+<ul>
+<li>
+<p>TEXT Utilizzato per i campi di testo a riga singola, si devono utilizzare gli attributi SIZE e MAXLENGTH per impostare la quantità massima di testo ammesso. Sono necessari gli attributi VALUE e NAME rispettivamente per assegnare un valore iniziale e per definire il nome univoco.</p>
+<pre><code class="language-html">&lt;input type=&quot;text&quot; value=&quot;nome&quot; name=&quot;nome&quot; size=&quot;20&quot; required&gt;
+</code></pre>
+</li>
+<li>
+<p>RADIO Utilizzato per un valore singolo su campi con diverse alternative. Se infatti allo stesso gruppo viene assegnato lo stesso nome, un solo valore potrà essere selezionato. E' possibile con CHECKED stabilire anche una scelta iniziale, sono obbligatori gli attributi NAME e VALUE.</p>
+<pre><code class="language-html">&lt;form&gt;
+	&lt;p&gt;Please select your age:&lt;/p&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age1&quot; name=&quot;age&quot; value=&quot;30&quot;&gt;
+  &lt;label for=&quot;age1&quot;&gt;0 - 30&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;radio&quot; id=&quot;age2&quot; name=&quot;age&quot; value=&quot;60&quot;&gt;
+  &lt;label for=&quot;age2&quot;&gt;31 - 60&lt;/label&gt;&lt;br&gt;  
+  &lt;input type=&quot;radio&quot; id=&quot;age3&quot; name=&quot;age&quot; value=&quot;100&quot;&gt;
+  &lt;label for=&quot;age3&quot;&gt;61 - 100&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.47.png" style="zoom:50%;" />
+</li>
+<li>
+<p>CHECKBOX Utilizzato per semplici attributi booleani, dove un campo può essere vero o falso , si o no.</p>
+<pre><code class="language-html">&lt;form action=&quot;/action_page.php&quot;&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle1&quot; name=&quot;vehicle1&quot; value=&quot;Bike&quot;&gt;
+  &lt;label for=&quot;vehicle1&quot;&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle2&quot; name=&quot;vehicle2&quot; value=&quot;Car&quot;&gt;
+  &lt;label for=&quot;vehicle2&quot;&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; id=&quot;vehicle3&quot; name=&quot;vehicle3&quot; value=&quot;Boat&quot;&gt;
+  &lt;label for=&quot;vehicle3&quot;&gt; I have a boat&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.58.11.png" style="zoom:50%;" />
+</li>
+<li>
+<p>FILE Con l'attributo File è possibile inviare un file contenuto nel proprio PC, ovviamente il server che lo riceve deve essere configurato per la scrittura sul disco.</p>
+<pre><code class="language-html">&lt;input type=&quot;file&quot; id=&quot;myfile&quot; name=&quot;myfile&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_21.59.07.png" style="zoom:50%;" />
+</li>
+<li>
+<p>PASSWORD Con l'attributo password è possibile inserire del testo in un campo senza che questo venga visualizzato, si vedranno una serie di asterischi.</p>
+<pre><code class="language-html">&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot; minlength=&quot;8&quot;&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.20.52.png" style="zoom:50%;" />
+</li>
+<li>
+<p>RESET E' un pulsante che riporta il modulo ai valori iniziali, cioè vuoto, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+</li>
+<li>
+<p>SUBMIT E' un pulsante che serve per inviare il modulo riempito, anche in questo caso l'attributo VALUE serve per il nome da visualizzare sul pulsante.</p>
+<img src="img/Schermata_2021-11-18_alle_22.19.03.png" style="zoom:50%;" />
+</li>
+<li>
+<p>BUTTON - Utilizzato per incorporare pulsanti. L'attributo NAME è utilizzato per assegnare al pulsante un nome univoco. L'attributo VALUE specifica il testo da visualizzare sul pulsante stesso.</p>
+</li>
+</ul>
+<h2 id="tag-select-e-option-6"><a class="header" href="#tag-select-e-option-6">Tag <code>&lt;select&gt;</code> e <code>&lt;option&gt;</code></a></h2>
+<p><strong>Select</strong>  consente di effettuare delle scelte rappresentate dall'elemento OPTION . Ha tre possibili attributi: MULTIPLE per effettuare diverse selezioni, NAME il nome che sarà inviato come coppia nome/valore, SIZE specifica il numero di voci visibili. </p>
+<p><strong>Option</strong>  è utilizzato soltanto con l'elemento SELECT, rappresenta una scelta fra diversi valori. Ha due possibili attributi: SELECTED per indicare l'opzione inizialmente selezionata e VALUE per indicarne il valore rappresentato.</p>
+<pre><code class="language-html">&lt;select id=&quot;cars&quot;&gt;
+  &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+  &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+  &lt;option value=&quot;opel&quot;&gt;Opel&lt;/option&gt;
+  &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.00.png" style="zoom:50%;" />
+<h2 id="tag-textarea-6"><a class="header" href="#tag-textarea-6">Tag <code>&lt;textarea&gt;</code></a></h2>
+<p>L'elemento  consente di immettere testo su più righe. Gli attributi ROWS e COLS specificano le dimensioni visibili del campo in caratteri. Provate ad introdurre del testo:</p>
+<pre><code class="language-html">&lt;textarea name=&quot;testo&quot; rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+&lt;/textarea&gt;
+</code></pre>
+<img src="img/Schermata_2021-11-18_alle_22.03.57.png" alt="textarea" style="zoom:50%;" />
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </body>
+</html>
